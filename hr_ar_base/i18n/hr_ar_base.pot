@@ -1,0 +1,31 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_ar_base
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: \n"
+
+#. module: hr_ar_base
+#: model:ir.model.fields,field_description:hr_ar_base.field_hr_employee__l10n_ar_cuil
+#: model:ir.model.fields,field_description:hr_ar_base.field_hr_version__l10n_ar_cuil
+msgid "CUIT/CUIL"
+msgstr ""
+
+#. module: hr_ar_base
+#: code:addons/hr_ar_base/models/hr_employee_cuit.py:0
+msgid "Duplicate CUIT/CUIL"
+msgstr ""
+
+#. module: hr_ar_base
+#: code:addons/hr_ar_base/models/hr_employee_cuit.py:0
+msgid "Employee %(employee)s already has this CUIT/CUIL."
+msgstr ""
+
+#. module: hr_ar_base
+#: code:addons/hr_ar_base/models/hr_employee_cuit.py:0
+msgid "\"%(value)s\" is not a valid CUIT/CUIL number."
+msgstr ""

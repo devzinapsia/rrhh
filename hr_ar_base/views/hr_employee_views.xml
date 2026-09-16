@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_employee_form_inherit_l10n_ar_cuil" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.l10n.ar.cuil</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="ssnid" position="after">
+                <field name="l10n_ar_cuil"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="hr_kanban_view_employees_inherit_l10n_ar_cuil" model="ir.ui.view">
+        <field name="name">hr.employee.kanban.inherit.l10n.ar.cuil</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+        <field name="arch" type="xml">
+            <div t-if="record.job_title.raw_value" position="after">
+                <div t-if="record.l10n_ar_cuil.raw_value" class="text-truncate">
+                    <i class="fa fa-fw me-2 fa-id-card text-primary" title="CUIT/CUIL"/>
+                    <field name="l10n_ar_cuil"/>
+                </div>
+            </div>
+        </field>
+    </record>
+
+    <record id="view_employee_tree_inherit_l10n_ar_cuil" model="ir.ui.view">
+        <field name="name">hr.employee.list.inherit.l10n.ar.cuil</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <field name="country_id" position="after">
+                <field name="l10n_ar_cuil" optional="hide"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_employee_filter_inherit_l10n_ar_cuil" model="ir.ui.view">
+        <field name="name">hr.employee.search.inherit.l10n.ar.cuil</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <field name="department_id" position="after">
+                <field name="l10n_ar_cuil"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
